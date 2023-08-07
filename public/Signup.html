@@ -1,0 +1,67 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	<meta name="description" content="Simple Forgot Password Page Using HTML and CSS">
+	<meta name="keywords" content="forgot password page, basic html and css">
+    <link rel = "stylesheet" href = "forgotPassword.css"/>
+   <form>
+	<title>Sign up- HTML + CSS</title>
+</head>
+<body>
+	<div class="row">
+		<h1>Signup</h1>
+		<br>
+		<label for ="UserType">UserType</label>
+		<input type="radio" name="UserType" value="individualUser">individualUser
+		<input type="radio" name="UserType" value="OrganiztionUser" checked>OrganiztionUser
+		<br>
+		<div class="form-group">
+			<p><label for="username">fullName</label></p>
+			<input type="text" name="user_name" id="fullName" placeholder="Enter your email">
+			<p><label for="phone">Phone</label></p>
+			<input type="number" name="phone" id="phone" placeholder="Enter your phone number">
+			 <p><label for="Email">Email</label></p>
+			<input type="email" name="Email" id="user_email" placeholder="Enter your Email">
+			<p><<label for ="Qualification:">Select your Higest Qualification:</label></p>
+				<select class="sQuestionInForgot">
+					<option value="">Qualification</option>
+				  <option value="Course">10th</option>  
+				  <option value="BCA">12th</option>  
+				  <option value="BBA">Graduate</option>  
+				  <option value="B.Tech">Post Graduate </option>  
+				  <option value="MBA">MBA</option>  
+				  <option value="MCA">MCA</option>  
+				  <option value="M.Tech">M.Tech</option>  
+				  </select>  
+            <label for="questiom">Select your security question:</label>
+			<select class="sQuestionInForgot">
+                <option value="AN">what is your chilhood name ?</option>
+                <option value="AP">what is your favourite hero ?</option>
+                <option value="AR">what is your favourite fruit ?</option>
+                <option value="AS">what is your aim ?</option>
+                <option value="BR">what is your favourite ice-cream ?</option>
+                <option value="CH">what is your favourite state ?</option>
+            </select>
+            
+            <p><label for="text">Security Answer</label></p>
+            <input type="text" name="text" placeholder="Enter your security answer">
+		</div>
+		<label for ="Gender">Gender</label>
+		<input type="radio" name="gender" value="mail"> Mail
+		<input type="radio" name="gender" value="female" checked> Female
+		<br>
+		<label for ="DOB">DOB</label>
+		<input type="date" name="DOB" >
+		<div class="form-group">
+			<p><label for="Address">Address</label></p>
+			<input type="text"name="Address"size="25" placeholder="Enter Address..."/>
+			<button type="submit" align="center" >submit</button>
+			<button type="submit" align="center" >Cancel</button>
+		</div>
+		<div class="footer">
+		</div>
+	</div>
+</form>
+	<script src="./js/forgotPassword.js"></script>
+</body>

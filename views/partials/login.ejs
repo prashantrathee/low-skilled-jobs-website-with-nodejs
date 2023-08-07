@@ -1,0 +1,74 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="public/css/login.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+      
+    </head>
+    <header>
+      <%- include("./header",{status:"Nothing"}); %>
+    </header>
+  <body>
+    <!-- <h3 id="userType">userType</h3> -->
+  <div class="wrapper1">
+      <input type="radio" name="select" id="option-1" value="individual" checked>
+      <input type="radio" name="select" id="option-2" value="organization">
+      <input type="radio" name="select" id="option-3" value="admin">
+        <label for="option-1" class="option option-1">
+          <div class="dot"></div>
+           <span>INDIVIDUAL</span>
+           </label>
+        <label for="option-2" class="option option-2">
+          <div class="dot"></div>
+           <span>ORGANIZATION</span>
+        </label>
+        <label for="option-3" class="option option-3">
+          <div class="dot"></div>
+           <span>ADMIN</span>
+        </label>
+     </div>
+  
+  
+  
+     <div id="login">
+      <div id="login-image" align="center-vertical">
+        <!-- <img src="/assets/images/job3.jpg" alt="Job pic"> -->
+      </div>
+      <div id="login-content">
+        <div id="login-title">
+          <h2>LOGIN</h2>
+          <div class="underline-title"></div>
+        </div>
+        <form method="post" onsubmit="return false;" id="loginForm" class="loginForm">
+          <label for="loginEmail" style="margin-top:3em">
+              &nbsp;Email
+            </label>
+          <input id="loginEmail" class="form-content" type="email" name="email" autocomplete="on" placeholder="eg: jhon@email.com" required />
+          <div class="form-border"></div>
+          <label for="loginPassword" style="padding-top:22px">&nbsp;Password
+            </label>
+          <input id="loginPassword" class="form-content" type="password" name="password" placeholder="********" required autocomplete="off"/>
+          <div class="form-border"></div>
+          <a href="/forgotPassword">
+            <legend id="forgot-pass">Forgot password?</legend>
+          </a>
+          <div class="alert alert-success" role="alert" id="successAlert" style="display: none;">
+              Success
+          </div>
+          <div class="alert alert-error" role="alert" id="errorAlert" style="display: none;">
+            Error
+          </div>
+          <input id="submit-btn" type="submit" name="submit" class="submit-btn" value="LOGIN" />
+          <a href="/register" id="signup">Don't have account yet?</a>
+          <a href="/" id="Home">Home</a>
+          
+        </form>
+      </div>
+    </div>
+  <script src="../../public/js/login.js"></script>
+  </body>
+  <footer>
+    <%- include("./footer",{status:"Nothing"}); %>
+  </footer>

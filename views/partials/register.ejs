@@ -1,0 +1,92 @@
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Yinka Enoch Adedokun">
+	<meta name="description" content="Simple Forgot Password Page Using HTML and CSS">
+	<meta name="keywords" content="forgot password page, basic html and css">
+    <link rel = "stylesheet" href = "/public/css/register.css"/>
+   
+</head>
+<header>
+	<%- include("./header",{status:"Nothing"})%>
+</header>
+<body>
+	
+	<div class="registerClass">
+		<h1>Signup</h1>
+		<br>
+		<form method="post" onsubmit="return false;" id="registerForm" class="registerForm">
+		<label for ="UserType">User Type </label>
+		<input type="radio" name="userType" value="individual">INDIVIDUAL
+		<input type="radio" name="userType" value="organization" checked>ORGANIZATION
+		<br>
+		<div class="form-group">
+			<p><label for="fullName">Full Name</label></p>
+			<input type="text" name="fullName" id="fullName" placeholder="Enter your full Name">
+
+			<p><label for="identity">Identity Number</label></p>
+			<input type="text" name="identity" id="identity" placeholder="Enter your Identity Number">
+
+			<p><label for="phone">Phone</label></p>
+			<input type="number" name="phone" id="phone" placeholder="Enter your phone number">
+			 <p><label for="email">Email</label></p>
+			<input type="email" name="email" id="email" placeholder="Enter your Email">
+			<p><label for ="qualificationSelect">Select your Higest Qualification:</label></p>
+				<select class="qualificationSelect" name="qualificationSelect" id="qualificationSelect">
+					<option value="Not Applicable">Not Applicable</option>  
+					<option value="Below 10th">Below 10th</option>  
+				  <option value="10th">10th</option>  
+				  <option value="12th">12th</option>  
+				  <option value="Graduate">Graduate</option>  
+				  <option value="Diploma">Post Graduate </option>  
+				  <option value="Post Graduation">MBA</option>  
+				  <option value="Phd">MCA</option>  
+				  </select>  
+            <label for="sQuestion">Select your security question:</label>
+			<select class="sQuestionInForgot" name="sQuestion" id="sQuestion" width="100%">
+                <option value="childHoodName">What is your chilhood name ?</option>
+                <option value="favouriteHero">Who is your favourite hero ?</option>
+                <option value="favouriteFruit">What is your favourite fruit ?</option>
+                <option value="aim">What is your aim ?</option>
+                <option value="favouriteIceCream">What is your favourite ice-cream ?</option>
+                <option value="favouriteState">What is your favourite state ?</option>
+            </select>
+            
+            <p><label for="sAnswer">Security Answer</label></p>
+            <input type="text" id="sAnswer" name="sAnswer" placeholder="Enter your security answer">
+		</div>
+		<label for ="Gender">Gender</label>
+		<input type="radio" name="gender" value="Not Applicable"> Not Applicable
+		<input type="radio" name="gender" value="mail"> Male
+		<input type="radio" name="gender" value="female" checked> Female
+		<br>
+		<label for ="DOB">DOB or Incorporation Date</label>
+		<input type="date" name="DOB" id="dateInput" >
+		<div class="form-group">
+			<p><label for="Address">Address</label></p>
+			<input type="text" name="Address" id="address" size="25" placeholder="Enter Address..."/>
+
+			<label for="newPassword" style="padding-top:22px">&nbsp;Password
+			</label>
+		  <input id="newPassword" class="form-content" type="password" name="newPassword" placeholder="********" required autocomplete="off"/>
+		  <label for="confirmPassword" style="padding-top:22px">&nbsp;Confirm Password
+			</label>
+			  <input id="confirmPassword" class="form-content" type="password" name="confirmPassword" placeholder="********" required autocomplete="off"/>
+			
+
+			  <input type="submit" name="submit" align="center" class="submit-btn" id="submit-btn" value="Register">
+			  
+			</div>
+		</div>
+</form>
+<div class="alert alert-success" role="alert" id="successAlert" style="display: none;">
+	Success
+</div>
+<div class="alert alert-error" role="alert" id="errorAlert" style="display: none;">
+  Error
+</div>
+	<script src="../../public/js/register.js"></script>
+</body>
+<footer>
+	<%- include("./footer")%>
+</footer>

@@ -1,0 +1,241 @@
+
+<head>
+    <title>JOB_ADDITION</title>
+    <link type="text/css" rel="stylesheet" href="../../public/css/postJob.css"
+</head>
+<header>
+    <%- include("./header",{status:status,user:user}); %>
+  </header>
+     <h1>Provide a Job</h1>
+<body onload="loadJobs()">
+    <table>
+      
+        <tr>
+            <td>
+                <h6 id="userType" style="display: none;"><%=user.userType%></h6>
+                <h6 id="userID" style="display: none;"><%=user.id%></h6>
+                <form method="post" onsubmit="return false;" id="postJobForm" class="postJobForm">
+                    
+                    <div>
+                        <label for="jobType">Job Type</label>
+                        <select class="jobTypeSelect" name="jobTypeSelect" id="jobTypeSelect">
+                          <option value="Baby-Sitter">Baby-Sitter</option>  
+                          <option value="Car Driver">Car Driver</option>  
+                          <option value="Cook">Cook</option>  
+                          <option value="Gardener">Gardener</option>  
+                          <option value="Housemaid">Housemaid</option>  
+                          <option value="Janitor">Janitor</option>  
+                          <option value="Labourer">Labourer</option>
+                          <option value="Plumber">Plumber</option>  
+                          <option value="Receptionist">Receptionist</option>  
+                          <option value="Tutor">Tutor</option>  
+                          <option value="Waiter">Waiter</option>
+                          <option value="Watchman">Watchman</option>  
+                          </select>  
+                    </div>
+                    <div>
+                        <label for="salary">Salary per hour</label>
+                        <input type="number" name="salary" id="salary">
+                        
+                    </div>
+                    <br>
+                    <label for="stateSelect">State</label>
+                    <select name="stateSelect" id="stateSelect" class="form-control">
+                        
+                        <option value="Andaman and Nicobar Islands">
+                          Andaman and Nicobar Islands
+                        </option>
+                        <option value="Andhra Pradesh">
+                          Andhra Pradesh
+                        </option>  
+                        <option value="Arunachal Pradesh">
+                          Arunachal Pradesh
+                        </option>
+                        <option value="Assam">
+                          Assam
+                        </option>
+                      
+                        <option value="Bihar">
+                          Bihar
+                        </option>
+                      
+                        <option value="Chandigarh">
+                          Chandigarh
+                        </option>
+                        <option value="Chhattisgarh">
+                          Chhattisgarh
+                        </option>
+                      
+                        <option value="Dadar and Nagar Haveli">
+                          Dadar and Nagar Haveli
+                        </option>
+                        <option value="Daman and Diu">
+                          Daman and Diu
+                        </option>
+                        <option value="Delhi">
+                          Delhi
+                        </option>
+                      
+                        <option value="Goa">
+                          Goa
+                        </option>
+                        <option value="Gujarat">
+                          Gujarat
+                        </option>
+                      
+                        <option value="Haryana">
+                          Haryana
+                        </option>
+                        <option value="Himachal Pradesh">
+                          Himachal Pradesh
+                        </option>
+                      
+                        <option value="Jammu and Kashmir">
+                          Jammu and Kashmir
+                        </option>
+                        <option value="Jharkhand">
+                          Jharkhand
+                        </option>
+                      
+                        <option value="Karnataka">
+                          Karnataka
+                        </option>
+                        <option value="Kerala">
+                          Kerala
+                        </option>
+                      
+                        <option value="Lakshadweep">
+                          Lakshadweep
+                        </option>
+                      
+                        <option value="Madhya Pradesh">
+                          Madhya Pradesh
+                        </option>
+                        <option value="Maharashtra">
+                          Maharashtra
+                        </option>
+                        <option value="Manipur">
+                          Manipur
+                        </option>
+                        <option value="Meghalaya">
+                          Meghalaya
+                        </option>
+                        <option value="Mizoram">
+                          Mizoram
+                        </option>
+                      
+                        <option value="Nagaland">
+                          Nagaland
+                        </option>
+                      
+                        <option value="Odisha">
+                          Odisha
+                        </option>
+                      
+                        <option value="Puducherry">
+                          Puducherry</option>
+                      
+                        <option value="Punjab">
+                          Punjab
+                        </option>
+                      
+                        <option value="Rajasthan">
+                          Rajasthan
+                        </option>
+                      
+                        <option value="Sikkim">
+                          Sikkim
+                        </option>
+                      
+                        <option value="Tamil Nadu">
+                          Tamil Nadu
+                        </option>
+                        <option value="Telangana">
+                          Telangana
+                        </option>
+                        <option value="Tripura">
+                          Tripura
+                        </option>
+                      
+                        <option value="Uttar Pradesh">
+                          Uttar Pradesh
+                        </option>
+                        <option value="Uttarakhand">
+                          Uttarakhand
+                        </option>
+                        
+                        <option value="West Bengal">
+                          West Bengal
+                        </option>
+                      </select>
+                      <br>
+                    <div>
+                        <label for="workingHour">Working hours</label>
+                        <input type="number" name="workingHour" id="workingHour">
+                    </div>
+                    <div>
+                      <label for="vacancies">Vacancies</label>
+                      <input type="number" name="vacancies" id="vacancies">
+                  </div>
+                    <br>
+                    <div>
+                        <label for="jobLocation">Job Location</label>
+                        <input type="text" name="jobLocation" id="jobLocation">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="jobDescription">Job Description</label>
+                        <!-- <input type="text" name="jobDescription" id="jobDescription"> -->
+                        <textarea id="jobDescription" name="jobDescription" rows="4" cols="60">
+                            Job Description here
+                            </textarea>
+                    </div>
+                    <br>
+                    <% if(status == "loggedIn") {%>
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit" id="submit" class="submit-btn">
+                        <input type="reset" value="Reset">
+                        <div class="alert alert-success" role="alert" id="successAlert" style="display: none;">
+                            Successfully Added
+                        </div>
+                    </div>
+                    <%} else{ %>
+                        <div class="alert alert-error" role="alert" id="errorAlert" style="display: none;">
+                            You are not logged in. 
+                        </div>
+                        <% } %>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Job Type</th>
+                                <th>Salary Per hour</th>
+                                <th>Working Hours per day</th>
+                                <th>Vacancies</th>
+                                <th>State</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bodyOfTable">
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <div class="alert alert-success" role="alert" id="successAlert" style="display: none;">
+      Sucsscess
+    </div>
+  <div class="alert alert-error" role="alert" id="errorAlert" style="display: none;">
+      Error
+    </div>
+    <script type="text/javascript" src="../../public/js/postJob.js"></script>
+</body>
+<footer>
+    
+        <%- include("./footer"); %>
+      
+</footer>

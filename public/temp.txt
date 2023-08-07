@@ -1,0 +1,88 @@
+
+            button10To11.setVisible(true);
+            button11To12.setVisible(true);
+            button9To10.setVisible(true);
+            button8To9.setVisible(true);
+            button1To2.setVisible(true);
+            button2To3.setVisible(true);
+            button3To4.setVisible(true);
+            button4To5.setVisible(true);
+
+
+
+case "9To10":
+                            //set Button
+                            eventLabel9To10.setText(ev.getEventName());
+                            facultyLabel9To10.setText(ev.getFacultyInitial());
+                            if(ev.getEventType().equals("Exam")) panel9To10.setBackground(examColor);
+                            else panel9To10.setBackground(lectureColor);
+                            break;
+case "10To11":
+                            //set Button
+                            eventLabel10To11.setText(ev.getEventName());
+                            facultyLabel10To11.setText(ev.getFacultyInitial());
+                            if(ev.getEventType().equals("Exam")) panel10To11.setBackground(examColor);
+                            else panel10To11.setBackground(lectureColor);
+                            break;
+case "11To12":
+                            //set Button
+                            eventLabel11To12.setText(ev.getEventName());
+                            facultyLabel11To12.setText(ev.getFacultyInitial());
+                            if(ev.getEventType().equals("Exam")) panel11To12.setBackground(examColor);
+                            else panel11To12.setBackground(lectureColor);
+                            break;
+case "1To2":
+                            //set Button
+                            eventLabel1To2.setText(ev.getEventName());
+                            facultyLabel1To2.setText(ev.getFacultyInitial());
+                            if(ev.getEventType().equals("Exam")) panel1To2.setBackground(examColor);
+                            else panel1To2.setBackground(lectureColor);
+                            break;
+case "2To3":
+                            //set Button
+                            eventLabel2To3.setText(ev.getEventName());
+                            facultyLabel2To3.setText(ev.getFacultyInitial());
+                            if(ev.getEventType().equals("Exam")) panel2To3.setBackground(examColor);
+                            else panel2To3.setBackground(lectureColor);
+                            break;
+case "3To4":
+                            //set Button
+                            eventLabel3To4.setText(ev.getEventName());
+                            facultyLabel3To4.setText(ev.getFacultyInitial());
+                            if(ev.getEventType().equals("Exam")) panel3To4.setBackground(examColor);
+                            else panel3To4.setBackground(lectureColor);
+                            break;
+case "4To5":
+                            //set Button
+                            eventLabel4To5.setText(ev.getEventName());
+                            facultyLabel4To5.setText(ev.getFacultyInitial());
+                            if(ev.getEventType().equals("Exam")) panel4To5.setBackground(examColor);
+                            else panel4To5.setBackground(lectureColor);
+                            break;
+
+
+
+
+                            button8To9.setText("+");
+                            button8To9.setBackground(plusButtonColor);
+                            
+                            button9To10.setText("+");
+                            button9To10.setBackground(plusButtonColor);
+                            
+                            button10To11.setText("+");
+                            button10To11.setBackground(plusButtonColor);
+                            
+                            button11To12.setText("+");
+                            button11To12.setBackground(plusButtonColor);
+                            
+                            button1To2.setText("+");
+                            button1To2.setBackground(plusButtonColor);
+                            
+                            button2To3.setText("+");
+                            button2To3.setBackground(plusButtonColor);
+                            
+                            button3To4.setText("+");
+                            button3To4.setBackground(plusButtonColor);
+                            
+                            button4To5.setText("+");
+                            button4To5.setBackground(plusButtonColor);

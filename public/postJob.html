@@ -1,0 +1,60 @@
+
+<head>
+    <title>JOB_ADDITION</title>
+    <link type="text/css" rel="stylesheet" href="./css/postJob.css"
+</head>
+     <h1>Provide a Job</h1>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    
+                    <div>
+                        <label for="jobType">Job Type</label>
+                        <input type="text" name="jobType" id="jobType">
+                    </div>
+                    <div>
+                        <label for="salary">Salary per hour</label>
+                        <input type="number" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label for="workingHour">Working hours</label>
+                        <input type="number" name="workingHour" id="workingHour">
+                    </div>
+                    <div>
+                        <label for="jobLocation">Job Location</label>
+                        <input type="text" name="jobLocation" id="jobLocation">
+                    </div>
+                    <div>
+                        <label for="jobDescription">Job Description</label>
+                        <input type="text" name="jobDescription" id="jobDescription">
+                    </div>
+ 
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Job Type</th>
+                                <th>Salary</th>
+                                <th>Working Hourse per day</th>
+                                <th>Location</th>
+                                <th>Job Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./js/postJob.js"></script>
+</body>
